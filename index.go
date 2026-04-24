@@ -42,8 +42,8 @@ func replaceWord(text string) string {
 		"fail":    "pass",
 	}
 
-	for i, done := range texts {
-		if newWord, ok := replacements[done]; ok {
+	for i, value := range texts {
+		if newWord, ok := replacements[value]; ok {
 			texts[i] = newWord
 		}
 	}
@@ -92,9 +92,7 @@ func printChar(text string) error {
 	}
 	return nil
 }
-
 func fixArticle(text string) string {
-
 	words := strings.Fields(text)
 
 	vowels := map[rune]bool{
@@ -106,12 +104,46 @@ func fixArticle(text string) string {
 	}
 
 	for i := 0; i < len(words)-1; i++ {
-		if words[i] == "a" {
-			nextWord := words[i+1]
-			firstLetter := []rune(strings.ToLower(nextWord))[0]
+		article := words[i]
 
-			if vowels[firstLetter] {
+		if article != "a" && article != "an" && article != "A" && article != "An" {
+			continue
+		}
+
+		nextIndex := i + 1
+
+		
+		if words[nextIndex] == "'" {
+			nextIndex++
+		}
+
+		
+		if nextIndex >= len(words) {
+			continue
+		}
+
+		nextWord := words[nextIndex]
+		nextWord = strings.Trim(nextWord, "'\"")
+
+		if nextWord == "" {
+			continue
+		}
+
+		firstLetter := []rune(strings.ToLower(nextWord))[0]
+
+		if vowels[firstLetter] {
+			switch article {
+			case "a":
 				words[i] = "an"
+			case "A":
+				words[i] = "An"
+			}
+		} else {
+			switch article {
+			case "an":
+				words[i] = "a"
+			case "An":
+				words[i] = "A"
 			}
 		}
 	}

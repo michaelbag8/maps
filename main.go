@@ -82,5 +82,5 @@ func main() {
 		fmt.Println("Error printing character")
 	}
 
-	fmt.Println(fixArticle("a apple"))
+	fmt.Println(fixArticle("a 'apple', an goat, A orange, An banana"))
 }
