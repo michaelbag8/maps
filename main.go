@@ -63,4 +63,24 @@ func main() {
 
 	boards := "X,_,O,_,X,_,O,_,X"
 	fmt.Println(MapCSVToIndex(boards))
+
+	// fixquote
+	fmt.Println(fixQuote(" i have a book . . . that i love reading , everyday"))
+
+	text := "TODO make this bad code better"
+	ab := "this code has been fix"
+	abs := "pending make this bad code better"
+	abc := "fail make this bad code better"
+	fmt.Println(replaceWord(text))
+	fmt.Println(replaceWord(ab))
+	fmt.Println(replaceWord(abs))
+	fmt.Println(replaceWord(abc))
+
+	fmt.Println("---------------")
+	err := printChar("BAG")
+	if err != nil {
+		fmt.Println("Error printing character")
+	}
+
+	fmt.Println(fixArticle("a apple"))
 }
