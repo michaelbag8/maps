@@ -5,11 +5,35 @@ import (
 )
 
 type Book struct {
+	Base
 	Title   string
 	Author  string
 	Pages   int
 	Price   float64
 	InStock bool
+}
+
+type Base struct {
+	ID        int
+	CreatedAt string
+	UpdatedAt string
+}
+
+type User struct {
+	Base
+	Name  string
+	Email string
+}
+
+type Order struct {
+	Base
+	BookID   int
+	Quantity int
+}
+
+// method
+func (b Base) Describe() string {
+	return fmt.Sprintf("ID:%d created:%s", b.ID, b.CreatedAt)
 }
 
 // This is a solution to a challenge
@@ -129,5 +153,37 @@ func main() {
 	}
 
 	fmt.Printf("Total Count: %d\n", len(book))
+
+	// Method
+	b := Book{
+		Base:   Base{ID: 1, CreatedAt: "2025-05-26"},
+		Title:  "Good To Great",
+		Author: "Peter Tosh",
+		Price:  23.45,
+	}
+	s := User{
+		Base: Base{ID: 3, CreatedAt: "2025-05-18"},
+		Name: "Michael Bag",
+	}
+
+	o := Order{
+		Base:     Base{ID: 4, CreatedAt: "1989-08-06"},
+		BookID:   234,
+		Quantity: 23,
+	}
+
+	c := Book{
+		Base:   Base{ID: 2, CreatedAt: "2025-05-26"},
+		Title:  "Start With Why",
+		Author: "Simon Sinek",
+		Price:  23.45,
+	}
+
+	fmt.Println(o.Quantity)
+	fmt.Println(s.Name)
+	fmt.Println(c.Describe())
+	fmt.Println(b.ID)
+	fmt.Println(b.CreatedAt)
+	fmt.Println(b.Title)
 
 }
