@@ -94,4 +94,32 @@ func main() {
 		fmt.Printf("\nMost expensive: %s by %s — $%.2f\n",
 			max.Title, max.Author, max.Price)
 	}
+
+	// Map Challenge
+fmt.Printf("\nMap Challenge\n")
+	book := map[string]string{
+		"Harry Potter":   "J.K. Rowling",
+		"Start With Why": "Simon Sinek",
+		"Good To Great":  "Jim Collins",
+	}
+
+	book["You Can See Me Now"] = "Arthur Smith"
+	book["Golang For Idiots"] = "James Babara"
+
+	book["Start With Why"] = "George Sinek"
+
+	delete(book, "Good To Great")
+
+	if title, ok := book["Start With Why"]; ok {
+		fmt.Println(title)
+	} else {
+		fmt.Println("Not Found")
+	}
+
+	for title, author := range book {
+		fmt.Printf("%s by %s\n", title, author)
+	}
+
+	fmt.Printf("Total Count: %d\n", len(book))
+
 }
