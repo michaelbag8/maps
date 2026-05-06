@@ -112,12 +112,10 @@ func fixArticle(text string) string {
 
 		nextIndex := i + 1
 
-		
 		if words[nextIndex] == "'" {
 			nextIndex++
 		}
 
-		
 		if nextIndex >= len(words) {
 			continue
 		}
