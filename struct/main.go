@@ -23,8 +23,8 @@ func NewBook(title, author string, pages int, price float64) (Book, error) {
 		return Book{}, fmt.Errorf("title can not be empty")
 	}
 
-	if pages < 0 {
-		return Book{}, fmt.Errorf("pages can not be empty")
+	if price < 0 {
+		return Book{}, fmt.Errorf("price cannot be negative, got %.2f", price)
 	}
 
 	if pages <= 0 {
@@ -49,28 +49,36 @@ func main() {
 
 	books := []Book{}
 	b1, err := NewBook("Why", "Bag", 300, 2.45)
-	if err == nil {
+	if err != nil {
+		fmt.Println("Error creating book:", err)
+	} else {
 		books = append(books, b1)
 	}
 
 	b2, err := NewBook("Why now", "Michael", 600, 76.6)
-	if err == nil {
+	if err != nil {
+		fmt.Println("Error creating book:", err)
+	} else {
 		books = append(books, b2)
 	}
 
 	b3, err := NewBook("Why me", "Mike", 700, 23.8)
-	if err == nil {
+	if err != nil {
+		fmt.Println("Error creating book:", err)
+	} else {
 		books = append(books, b3)
 	}
 
 	b4, err := NewBook("Why Not You", "Zoe", 900, 24.7)
-	if err == nil {
+	if err != nil {
+		fmt.Println("Error creating book:", err)
+	} else {
 		books = append(books, b4)
 	}
 
 	fmt.Println("\nAll Books Formatted")
 	for _, b := range books {
-		fmt.Printf("%s by %s - %d pages, $%v\n",
+		fmt.Printf("%s by %s - %d pages, $%.2f\n",
 			b.Title, b.Author, b.Pages, b.Price)
 	}
 
@@ -96,7 +104,7 @@ func main() {
 	}
 
 	// Map Challenge
-fmt.Printf("\nMap Challenge\n")
+	fmt.Printf("\nMap Challenge\n")
 	book := map[string]string{
 		"Harry Potter":   "J.K. Rowling",
 		"Start With Why": "Simon Sinek",
