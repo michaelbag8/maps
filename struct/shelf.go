@@ -120,3 +120,4 @@ func main() {
 		fmt.Printf("[%d] %s by %s - $%.2f (created: %s)\n", book.ID, book.Title, book.Author, book.Price, book.CreatedAt)
 	}
 }
+

@@ -190,3 +190,31 @@ func main() {
 	}
 
 }
+
+
+// Feature A — Genre dispatcher
+// Add a Genre string field to your Book struct
+// Update NewBook to accept genre string
+// Write a function describeGenre(genre string) string that returns:
+// "Fiction"     → "Fantasy, Sci-Fi, Horror, Thriller"
+// "Non-Fiction" → "Business, Self-Help, Science"
+// "Technical"   → "Programming, Engineering, Math"
+// default       → "Uncategorized"
+// Use switch with multiple values per case
+
+// Feature B — Page count category
+// Write pageCategory(pages int) string that returns:
+// < 100  → "Short Read"
+// < 300  → "Medium Read"
+// < 600  → "Long Read"
+// >= 600 → "Epic Read"
+// Use switch with no condition
+// Loop through all books and print:
+// "<title>: <category>"
+
+// Feature C — Stock status dispatcher
+// Loop through books
+// Use switch on InStock (bool) to print:
+// true  → "✅ In Stock: <title> — $<price>"
+// false → "❌ Out of Stock: <title>"
+// Set books[0].InStock = false to test both cases
