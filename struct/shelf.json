@@ -38,5 +38,205 @@
     "pages": 800,
     "price": 12.6,
     "in_stock": true
+  },
+  {
+    "id": 5,
+    "created_at": "2024-01-02",
+    "updated_at": "2024-01-02",
+    "title": "The Silent Galaxy",
+    "author": "Nina Cross",
+    "pages": 420,
+    "price": 45.99,
+    "in_stock": true
+  },
+  {
+    "id": 6,
+    "created_at": "2024-01-02",
+    "updated_at": "2024-01-02",
+    "title": "Cooking With Fire",
+    "author": "Chef Ramsey Cole",
+    "pages": 180,
+    "price": 25.5,
+    "in_stock": true
+  },
+  {
+    "id": 7,
+    "created_at": "2024-01-03",
+    "updated_at": "2024-01-03",
+    "title": "Mystery Of The Red House",
+    "author": "Claire Benson",
+    "pages": 350,
+    "price": 29.99,
+    "in_stock": false
+  },
+  {
+    "id": 8,
+    "created_at": "2024-01-03",
+    "updated_at": "2024-01-03",
+    "title": "AI And The Future",
+    "author": "David Kim",
+    "pages": 500,
+    "price": 70.0,
+    "in_stock": true
+  },
+  {
+    "id": 9,
+    "created_at": "2024-01-04",
+    "updated_at": "2024-01-04",
+    "title": "The Last Kingdom",
+    "author": "Arthur Doyle",
+    "pages": 620,
+    "price": 55.75,
+    "in_stock": true
+  },
+  {
+    "id": 10,
+    "created_at": "2024-01-04",
+    "updated_at": "2024-01-04",
+    "title": "Mind Over Fear",
+    "author": "Sarah Bloom",
+    "pages": 240,
+    "price": 18.4,
+    "in_stock": true
+  },
+  {
+    "id": 11,
+    "created_at": "2024-01-05",
+    "updated_at": "2024-01-05",
+    "title": "Basketball Legends",
+    "author": "Jordan Miles",
+    "pages": 390,
+    "price": 32.1,
+    "in_stock": false
+  },
+  {
+    "id": 12,
+    "created_at": "2024-01-05",
+    "updated_at": "2024-01-05",
+    "title": "Deep Sea Creatures",
+    "author": "Linda Waters",
+    "pages": 275,
+    "price": 27.89,
+    "in_stock": true
+  },
+  {
+    "id": 13,
+    "created_at": "2024-01-06",
+    "updated_at": "2024-01-06",
+    "title": "The Hacker's Diary",
+    "author": "Neo Grant",
+    "pages": 410,
+    "price": 49.99,
+    "in_stock": true
+  },
+  {
+    "id": 14,
+    "created_at": "2024-01-06",
+    "updated_at": "2024-01-06",
+    "title": "Poems For The Broken",
+    "author": "Ella Moon",
+    "pages": 150,
+    "price": 14.25,
+    "in_stock": true
+  },
+  {
+    "id": 15,
+    "created_at": "2024-01-07",
+    "updated_at": "2024-01-07",
+    "title": "Journey To Mars",
+    "author": "Chris Nova",
+    "pages": 520,
+    "price": 67.35,
+    "in_stock": false
+  },
+  {
+    "id": 16,
+    "created_at": "2024-01-07",
+    "updated_at": "2024-01-07",
+    "title": "The Art Of Business",
+    "author": "Monica Reed",
+    "pages": 330,
+    "price": 41.2,
+    "in_stock": true
+  },
+  {
+    "id": 17,
+    "created_at": "2024-01-08",
+    "updated_at": "2024-01-08",
+    "title": "Hidden Jungle",
+    "author": "Peter Wild",
+    "pages": 295,
+    "price": 24.99,
+    "in_stock": true
+  },
+  {
+    "id": 18,
+    "created_at": "2024-01-08",
+    "updated_at": "2024-01-08",
+    "title": "Love In Paris",
+    "author": "Sophia Lane",
+    "pages": 310,
+    "price": 21.5,
+    "in_stock": true
+  },
+  {
+    "id": 19,
+    "created_at": "2024-01-09",
+    "updated_at": "2024-01-09",
+    "title": "Ancient Civilizations",
+    "author": "Henry Stone",
+    "pages": 710,
+    "price": 80.0,
+    "in_stock": false
+  },
+  {
+    "id": 20,
+    "created_at": "2024-01-09",
+    "updated_at": "2024-01-09",
+    "title": "Cyber Security 101",
+    "author": "Alex Hunter",
+    "pages": 430,
+    "price": 58.9,
+    "in_stock": true
+  },
+  {
+    "id": 21,
+    "created_at": "2024-01-10",
+    "updated_at": "2024-01-10",
+    "title": "Desert Storm",
+    "author": "Khalid Noor",
+    "pages": 360,
+    "price": 39.45,
+    "in_stock": true
+  },
+  {
+    "id": 22,
+    "created_at": "2024-01-10",
+    "updated_at": "2024-01-10",
+    "title": "Photography Basics",
+    "author": "Lara Kent",
+    "pages": 210,
+    "price": 19.95,
+    "in_stock": true
+  },
+  {
+    "id": 23,
+    "created_at": "2024-01-11",
+    "updated_at": "2024-01-11",
+    "title": "The Forgotten Warrior",
+    "author": "Marcus Vale",
+    "pages": 480,
+    "price": 44.0,
+    "in_stock": false
+  },
+  {
+    "id": 24,
+    "created_at": "2024-01-11",
+    "updated_at": "2024-01-11",
+    "title": "Healthy Living Daily",
+    "author": "Grace Well",
+    "pages": 260,
+    "price": 17.8,
+    "in_stock": true
   }
 ]
