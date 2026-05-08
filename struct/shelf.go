@@ -81,19 +81,19 @@ func loadShelf(filename string) ([]Book, error) {
 func main() {
 	// TODO 5: Create 3 books using NewBook
 	books := []Book{}
-	b1, err := NewBook(1, "The Way Of The Water", "Avatar Shin", 200, 34.67)
+	b1, err := NewBook(1, "The Way Of The Water", "Avatar Shin", "Fiction",200, 34.67)
 	if err != nil {
 		fmt.Println("error: creating a book")
 	} else {
 		books = append(books, b1)
 	}
-	b2, err := NewBook(2, "Geology For Idiots", "Michael Bag", 300, 60.67)
+	b2, err := NewBook(2, "Geology For Idiots", "Michael Bag","Technical", 300, 60.67)
 	if err != nil {
 		fmt.Println("error: creating a book")
 	} else {
 		books = append(books, b2)
 	}
-	b3, err := NewBook(3, "Golang For Idiots", "Aboh Oche", 600, 98.67)
+	b3, err := NewBook(3, "Golang For Idiots", "Aboh Oche", "Technical", 600, 98.67)
 	if err != nil {
 		fmt.Println("error: creating a book")
 	} else {

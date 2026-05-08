@@ -28,6 +28,7 @@ func NewBook(id int, title, author string, genre string,pages int, price float64
 		Title:   title,
 		Author:  author,
 		Pages:   pages,
+		Genre:   genre,
 		Price:   price,
 		InStock: true,
 	}, nil
@@ -150,7 +151,7 @@ func main() {
 	// Print "Saved!" on success, "Save failed: <err>" on failure
 	fmt.Println("\nSave with init statement")
 
-	b5, err := NewBook(4, "Who is this Allah", "Mosey Abdul", 800, 12.6)
+	b5, err := NewBook(4, "Who is this Allah", "Mosey Abdul","Non-Fiction", 800, 12.6)
 	if err != nil {
 		fmt.Println("Error creating book:", err)
 		return
