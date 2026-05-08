@@ -102,7 +102,7 @@ func pageCategory(pages int) string{
 			 return "Medium Read"
 		case pages < 600:
 			 return "Long Read"
-		case pages >= 600: 
+		default: 
 			return "Epic Read"
 	}
 }
@@ -130,7 +130,7 @@ func main() {
 	// > $70     → "💎 Premium: <title>"
 	// $30-$70   → "📚 Standard: <title>"
 	// < $30     → "💰 Budget: <title>"
-	fmt.Println("\nPrice categorizer")
+	 fmt.Println("\n=== Page Categories ===")
 	for _, v := range books {
 		switch {
 		case v.Price > 70:
@@ -149,7 +149,7 @@ func main() {
 	// Add a new book to the shelf using NewBook
 	// Save using saveShelf — call it with an IF INIT STATEMENT
 	// Print "Saved!" on success, "Save failed: <err>" on failure
-	fmt.Println("\nSave with init statement")
+	fmt.Println("\n=== Save with init statement ===")
 
 	b5, err := NewBook(4, "Who is this Allah", "Mosey Abdul","Non-Fiction", 800, 12.6)
 	if err != nil {
@@ -168,7 +168,7 @@ func main() {
 	// Write a findBook(books []Book, title string) (Book, error)
 	// function that returns a Book or error if not found
 	// Call it using an IF INIT STATEMENT — no variables outside the if
-	fmt.Println("\nSearch with init statement")
+	fmt.Println("\n=== Search with init statement ===")
 	if book, err := findBook(books, "Golang For Idiots"); err != nil {
 		fmt.Println("Not found:", err)
 	} else {
@@ -180,7 +180,7 @@ func main() {
 	// "1. The Way Of The Water by Avatar Shin — $34.67"
 	// "2. Geology For Idiots by Michael Bag — $60.67"
 	// Use classic for loop with index
-	fmt.Println("Numbered List")
+	fmt.Println("=== Numbered List ===")
 	for index := 0; index < len(books); index++ {
 		fmt.Printf("%d. %s by %s — $%.2f\n", index+1, books[index].Title, books[index].Author, books[index].Price)
 	}
@@ -192,7 +192,7 @@ func main() {
 	// Print "Found: <title>" if found, "Not found" if not
 	// Stop searching the moment you find it
 
-	fmt.Println("\nSearch with break")
+	fmt.Println("\n=== Search with break ===")
 	found := false
 	for _, v := range books {
 		if v.Title == "Golang For Idiots" {
@@ -209,7 +209,7 @@ func main() {
 	// Set one book's InStock to false manually
 	// Loop through books — skip books where InStock == false
 	// Print only available books with prefix "Available: "
-	fmt.Println("\nSkip unavailable with continue")
+	fmt.Println("\n=== Skip unavailable with continue ===")
 	books[1].InStock = false
 	for _, k := range books {
 		if !k.InStock {
@@ -221,7 +221,10 @@ func main() {
 // Add a Genre string field to your Book struct
 // Update NewBook to accept genre string
 // Write a function describeGenre(genre string) string that returns:
-fmt.Println("\nGenre dispatcher")
+fmt.Println("=== Genre Dispatcher ===")
+    for _, b := range books {
+        fmt.Printf("%s → %s\n", b.Title, describeGenre(b.Genre))
+    }
 
 // case "Fiction"    : 
 // return "Fantasy, Sci-Fi, Horror, Thriller"
@@ -235,7 +238,7 @@ fmt.Println("\nGenre dispatcher")
 
 // Feature B — fmt.Println("\nPage count category")
 // Write pageCategory(pages int) string that returns:
-fmt.Println("\nPage count category")
+fmt.Println("\n=== Page count category ===")
 for _, s := range books{
 	fmt.Printf("%s: %s\n", s.Title, s.Genre)
 }
@@ -253,12 +256,12 @@ for _, s := range books{
 // true  → "✅ In Stock: <title> — $<price>"
 // false → "❌ Out of Stock: <title>"
 // Set books[0].InStock = false to test both cases
-fmt.Println("\nStock status dispatcher")
+fmt.Println("\n=== Stock status dispatcher ===")
 books[0].InStock = false
 for _, b := range books{
 	switch b.InStock{
 	case true:
-		fmt.Print("✅ In Stock: %s - %.2f\n", b.Title, b.Price)
+		fmt.Printf("✅ In Stock: %s - %.2f\n", b.Title, b.Price)
 	case false:
 		fmt.Printf("❌ Out of Stock: %s\n", b.Title)
 	}

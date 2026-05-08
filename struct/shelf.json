@@ -5,6 +5,7 @@
     "updated_at": "2024-01-01",
     "title": "The Way Of The Water",
     "author": "Avatar Shin",
+    "genre": "Fantasy",
     "pages": 200,
     "price": 34.67,
     "in_stock": true
@@ -15,6 +16,7 @@
     "updated_at": "2024-01-01",
     "title": "Golang For Idiots",
     "author": "Michael Bag",
+    "genre": "Technology",
     "pages": 300,
     "price": 60.67,
     "in_stock": true
@@ -25,6 +27,7 @@
     "updated_at": "2024-01-01",
     "title": "Rust For Idiots",
     "author": "Aboh Oche",
+    "genre": "Programming",
     "pages": 600,
     "price": 98.67,
     "in_stock": true
@@ -35,6 +38,7 @@
     "updated_at": "2024-01-01",
     "title": "Who is this Allah",
     "author": "Mosey Abdul",
+    "genre": "Religion",
     "pages": 800,
     "price": 12.6,
     "in_stock": true
@@ -45,6 +49,7 @@
     "updated_at": "2024-01-02",
     "title": "The Silent Galaxy",
     "author": "Nina Cross",
+    "genre": "Science Fiction",
     "pages": 420,
     "price": 45.99,
     "in_stock": true
@@ -55,6 +60,7 @@
     "updated_at": "2024-01-02",
     "title": "Cooking With Fire",
     "author": "Chef Ramsey Cole",
+    "genre": "Cooking",
     "pages": 180,
     "price": 25.5,
     "in_stock": true
@@ -65,9 +71,9 @@
     "updated_at": "2024-01-03",
     "title": "Mystery Of The Red House",
     "author": "Claire Benson",
+    "genre": "Mystery",
     "pages": 350,
-    "price": 29.99,
-    "in_stock": false
+    "price": 29.99
   },
   {
     "id": 8,
@@ -75,8 +81,9 @@
     "updated_at": "2024-01-03",
     "title": "AI And The Future",
     "author": "David Kim",
+    "genre": "Artificial Intelligence",
     "pages": 500,
-    "price": 70.0,
+    "price": 70,
     "in_stock": true
   },
   {
@@ -85,6 +92,7 @@
     "updated_at": "2024-01-04",
     "title": "The Last Kingdom",
     "author": "Arthur Doyle",
+    "genre": "Historical Fiction",
     "pages": 620,
     "price": 55.75,
     "in_stock": true
@@ -95,6 +103,7 @@
     "updated_at": "2024-01-04",
     "title": "Mind Over Fear",
     "author": "Sarah Bloom",
+    "genre": "Self Help",
     "pages": 240,
     "price": 18.4,
     "in_stock": true
@@ -105,9 +114,9 @@
     "updated_at": "2024-01-05",
     "title": "Basketball Legends",
     "author": "Jordan Miles",
+    "genre": "Sports",
     "pages": 390,
-    "price": 32.1,
-    "in_stock": false
+    "price": 32.1
   },
   {
     "id": 12,
@@ -115,6 +124,7 @@
     "updated_at": "2024-01-05",
     "title": "Deep Sea Creatures",
     "author": "Linda Waters",
+    "genre": "Nature",
     "pages": 275,
     "price": 27.89,
     "in_stock": true
@@ -125,6 +135,7 @@
     "updated_at": "2024-01-06",
     "title": "The Hacker's Diary",
     "author": "Neo Grant",
+    "genre": "Cyberpunk",
     "pages": 410,
     "price": 49.99,
     "in_stock": true
@@ -135,6 +146,7 @@
     "updated_at": "2024-01-06",
     "title": "Poems For The Broken",
     "author": "Ella Moon",
+    "genre": "Poetry",
     "pages": 150,
     "price": 14.25,
     "in_stock": true
@@ -145,9 +157,9 @@
     "updated_at": "2024-01-07",
     "title": "Journey To Mars",
     "author": "Chris Nova",
+    "genre": "Adventure",
     "pages": 520,
-    "price": 67.35,
-    "in_stock": false
+    "price": 67.35
   },
   {
     "id": 16,
@@ -155,6 +167,7 @@
     "updated_at": "2024-01-07",
     "title": "The Art Of Business",
     "author": "Monica Reed",
+    "genre": "Business",
     "pages": 330,
     "price": 41.2,
     "in_stock": true
@@ -165,6 +178,7 @@
     "updated_at": "2024-01-08",
     "title": "Hidden Jungle",
     "author": "Peter Wild",
+    "genre": "Wildlife",
     "pages": 295,
     "price": 24.99,
     "in_stock": true
@@ -175,6 +189,7 @@
     "updated_at": "2024-01-08",
     "title": "Love In Paris",
     "author": "Sophia Lane",
+    "genre": "Romance",
     "pages": 310,
     "price": 21.5,
     "in_stock": true
@@ -185,9 +200,9 @@
     "updated_at": "2024-01-09",
     "title": "Ancient Civilizations",
     "author": "Henry Stone",
+    "genre": "History",
     "pages": 710,
-    "price": 80.0,
-    "in_stock": false
+    "price": 80
   },
   {
     "id": 20,
@@ -195,6 +210,7 @@
     "updated_at": "2024-01-09",
     "title": "Cyber Security 101",
     "author": "Alex Hunter",
+    "genre": "Technology",
     "pages": 430,
     "price": 58.9,
     "in_stock": true
@@ -205,6 +221,7 @@
     "updated_at": "2024-01-10",
     "title": "Desert Storm",
     "author": "Khalid Noor",
+    "genre": "War",
     "pages": 360,
     "price": 39.45,
     "in_stock": true
@@ -215,6 +232,7 @@
     "updated_at": "2024-01-10",
     "title": "Photography Basics",
     "author": "Lara Kent",
+    "genre": "Photography",
     "pages": 210,
     "price": 19.95,
     "in_stock": true
@@ -225,9 +243,9 @@
     "updated_at": "2024-01-11",
     "title": "The Forgotten Warrior",
     "author": "Marcus Vale",
+    "genre": "Action",
     "pages": 480,
-    "price": 44.0,
-    "in_stock": false
+    "price": 44
   },
   {
     "id": 24,
@@ -235,8 +253,20 @@
     "updated_at": "2024-01-11",
     "title": "Healthy Living Daily",
     "author": "Grace Well",
+    "genre": "Health",
     "pages": 260,
     "price": 17.8,
+    "in_stock": true
+  },
+  {
+    "id": 4,
+    "created_at": "2024-01-01",
+    "updated_at": "2024-01-01",
+    "title": "Who is this Allah",
+    "author": "Mosey Abdul",
+    "genre": "Non-Fiction",
+    "pages": 800,
+    "price": 12.6,
     "in_stock": true
   }
 ]
