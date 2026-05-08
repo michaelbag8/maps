@@ -13,7 +13,7 @@ type Base struct {
 	UpdatedAt string `json:"updated_at,omitempty"`
 }
 
-func NewBook(id int, title, author string, pages int, price float64) (Book, error) {
+func NewBook(id int, title, author string, genre string,pages int, price float64) (Book, error) {
 	if title == "" {
 		return Book{}, fmt.Errorf("title can not be empty")
 	}
@@ -40,6 +40,7 @@ type Book struct {
 	Base
 	Title   string  `json:"title"`
 	Author  string  `json:"author"`
+	Genre string	`json:"genre"`
 	Pages   int     `json:"pages"`
 	Price   float64 `json:"price"`
 	InStock bool    `json:"in_stock,omitempty"`
@@ -76,6 +77,33 @@ func loadShelf(filename string) ([]Book, error) {
 		return nil, fmt.Errorf("failed to unmarshal books: %w", err)
 	}
 	return books, nil
+}
+
+func describeGenre(genre string) string{
+	switch genre{
+	case "Fiction":
+	return "Fantasy, Sci-Fi, Horror, Thriller"
+	case "Non-Fiction":
+	return "Business, Self-Help, Science"
+	case "Technical":
+	return "Programming, Engineering, Math"
+	default:
+		return "Uncategorized"
+	}
+}
+
+
+func pageCategory(pages int) string{
+	switch {
+		case pages < 100:
+			 return "Short Read"
+		case pages < 300:
+			 return "Medium Read"
+		case pages < 600:
+			 return "Long Read"
+		case pages >= 600: 
+			return "Epic Read"
+	}
 }
 
 // Use your existing Base, Book, NewBook, loadShelf from Feature 5
@@ -188,26 +216,32 @@ func main() {
 		}
 		fmt.Printf("Available: %s\n", k.Title)
 	}
-
-}
-
-
 // Feature A — Genre dispatcher
 // Add a Genre string field to your Book struct
 // Update NewBook to accept genre string
 // Write a function describeGenre(genre string) string that returns:
-// "Fiction"     → "Fantasy, Sci-Fi, Horror, Thriller"
-// "Non-Fiction" → "Business, Self-Help, Science"
-// "Technical"   → "Programming, Engineering, Math"
-// default       → "Uncategorized"
+fmt.Println("\nGenre dispatcher")
+
+// case "Fiction"    : 
+// return "Fantasy, Sci-Fi, Horror, Thriller"
+// case "Non-Fiction": 
+// return "Business, Self-Help, Science"
+// case "Technical"  : 
+// return "Programming, Engineering, Math"
+// case default      : 
+// return "Uncategorized"
 // Use switch with multiple values per case
 
-// Feature B — Page count category
+// Feature B — fmt.Println("\nPage count category")
 // Write pageCategory(pages int) string that returns:
-// < 100  → "Short Read"
-// < 300  → "Medium Read"
-// < 600  → "Long Read"
-// >= 600 → "Epic Read"
+fmt.Println("\nPage count category")
+for _, s := range books{
+	fmt.Printf("%s: %s\n", s.Title, s.Genre)
+}
+// case pages < 100: return "Short Read"
+// case pages < 300: return "Medium Read"
+// case pages < 600: return "Long Read"
+// case pages >= 60: return "Epic Read"
 // Use switch with no condition
 // Loop through all books and print:
 // "<title>: <category>"
@@ -218,3 +252,15 @@ func main() {
 // true  → "✅ In Stock: <title> — $<price>"
 // false → "❌ Out of Stock: <title>"
 // Set books[0].InStock = false to test both cases
+fmt.Println("\nStock status dispatcher")
+books[0].InStock = false
+for _, b := range books{
+	switch b.InStock{
+	case true:
+		fmt.Print("✅ In Stock: %s - %.2f\n", b.Title, b.Price)
+	case false:
+		fmt.Printf("❌ Out of Stock: %s\n", b.Title)
+	}
+}
+
+}
