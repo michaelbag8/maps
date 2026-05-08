@@ -80,14 +80,28 @@ func loadShelf(filename string) ([]Book, error) {
 	return books, nil
 }
 
-func describeGenre(genre string) string{
-	switch genre{
-	case "Fiction":
-	return "Fantasy, Sci-Fi, Horror, Thriller"
-	case "Non-Fiction":
-	return "Business, Self-Help, Science"
-	case "Technical":
-	return "Programming, Engineering, Math"
+func describeGenre(genre string) string {
+	switch genre {
+
+	// Fiction
+	case "Fantasy", "Science Fiction", "Sci-Fi", "Horror",
+		"Thriller", "Mystery", "Historical Fiction",
+		"Adventure", "Romance", "Action", "Cyberpunk":
+		return "Fiction"
+
+	// Non-Fiction
+	case "Business", "Self Help", "Science",
+		"Religion", "History", "Health",
+		"Photography", "Sports", "Nature",
+		"Wildlife", "Cooking", "Poetry":
+		return "Non-Fiction"
+
+	// Technical
+	case "Programming", "Technology",
+		"Artificial Intelligence", "Engineering", "Math",
+		"Technical":
+		return "Technical"
+
 	default:
 		return "Uncategorized"
 	}
@@ -240,7 +254,7 @@ fmt.Println("=== Genre Dispatcher ===")
 // Write pageCategory(pages int) string that returns:
 fmt.Println("\n=== Page count category ===")
 for _, s := range books{
-	fmt.Printf("%s: %s\n", s.Title, s.Genre)
+	fmt.Printf("%s: %s\n", s.Title, pageCategory(s.Pages))
 }
 // case pages < 100: return "Short Read"
 // case pages < 300: return "Medium Read"

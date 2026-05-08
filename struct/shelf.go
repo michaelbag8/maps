@@ -13,7 +13,7 @@ type Base struct {
 	UpdatedAt string `json:"updated_at,omitempty"`
 }
 
-func NewBook(id int, title, author string, pages int, price float64) (Book, error) {
+func NewBook(id int, title, author string, genre string, pages int, price float64) (Book, error) {
 	if title == "" {
 		return Book{}, fmt.Errorf("title can not be empty")
 	}
@@ -27,6 +27,7 @@ func NewBook(id int, title, author string, pages int, price float64) (Book, erro
 		Base:    Base{ID: id, CreatedAt: "2024-01-01", UpdatedAt: "2024-01-01"},
 		Title:   title,
 		Author:  author,
+		Genre:	genre,
 		Pages:   pages,
 		Price:   price,
 		InStock: true,
@@ -40,6 +41,7 @@ type Book struct {
 	Base
 	Title   string  `json:"title"`
 	Author  string  `json:"author"`
+	Genre   string	`json:"genre`
 	Pages   int     `json:"pages"`
 	Price   float64 `json:"price"`
 	InStock bool    `json:"in_stock,omitempty"`
